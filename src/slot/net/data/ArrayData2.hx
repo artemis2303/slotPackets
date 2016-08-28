@@ -12,6 +12,6 @@ class ArrayData2
 
 	public function toString():String 
 	{
-		return "[ReelData2]";
+		return "[ArrayData2 data=" + data.join(", ") + "]";
 	}
 }

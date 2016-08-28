@@ -1,9 +1,12 @@
 package;
 
+import haxe.format.JsonParser;
 import openfl.Assets;
+import openfl.Vector;
 import openfl.display.Sprite;
 import slot.net.StringDataSource;
 import slot.net.data.InitializePacket;
+import slot.net.data.LastState;
 import slot.net.data.deserialization.DataDeserializer;
 import slot.net.data.serialization.DataSerializer;
 
@@ -15,25 +18,24 @@ class Main extends Sprite
 		super();
 		
 		
-		
 		var dataSource:StringDataSource = new StringDataSource();
-		dataSource.data = "052291753724067485694526784516734576456847546522d26714350746375279456456745671364256347147256522f7358643751726049612734612534567456745712534871623c542706371435249261435671234567567456172435637152435760476273233734172483670526954156012345167845071627342586273143521617853724063756946821452146207143507146352794021973586437017826049524164582174257063761435249263567521a734152487346706526985145380001010101010104271010071a413880a101010101010170a0a0a1100101010101000000000000000001c11121314151a1f21421921e22822d23223c24625025a26427828c2a02b42c82fa312c319031f433e80b1010101010101010101010";
+		dataSource.data = "1000104271010101010101007051010101010101010101010061010101010101b322d1d11172114";
 		//dataSource.data = "052193332022755666555114144430219333344424225055511016666721933322625550566674440411312193331104444043372255565666219333555114744474335066622000001010101010104271010071a4138805101010101010170505051100101010101000000000000000001a121416181a21421e22823223c25026427828c2a02b42c82f0311831403168319031f43258332033e806101010101010";
 		
 		var dataSerializer = new DataSerializer(dataSource);
-		dataSerializer.setSerializeStructure(Assets.getText("packets/initialize.data"));
+		dataSerializer.setSerializeStructure(Assets.getText("packets/lastState.data"));
 		
-		var initializePacket:InitializePacket = new InitializePacket();
-		dataSerializer.serialize(initializePacket);
+		var packet:LastState = new LastState();
+		dataSerializer.serialize(packet);
 		
 		trace(dataSource.position, dataSource.length);
-		trace(initializePacket);
+		trace(packet);
 		
 		var dataOutput:StringDataSource = new StringDataSource();
 		var dataDeserializer:DataDeserializer = new DataDeserializer(dataOutput);
-		dataDeserializer.setDeserializersStructure(Assets.getText("packets/initialize.data"));
+		dataDeserializer.setDeserializersStructure(Assets.getText("packets/lastState.data"));
 		
-		dataDeserializer.deserialize(initializePacket);
+		dataDeserializer.deserialize(packet);
 		
 		trace(dataSource.length, dataOutput.length);
 		

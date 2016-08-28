@@ -1,5 +1,4 @@
 package slot.net.data;
-import openfl.Vector;
 
 class InitializePacket
 {

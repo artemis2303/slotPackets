@@ -29,6 +29,9 @@ class DataSerializer extends BaseSerializer
 		
 		for (i in 0...lines.length)
 		{
+			if (lines[i].length == 0)
+				continue;
+				
 			pattern.match(lines[i]);
 			
 			var fieldName:String = pattern.matched(1);
