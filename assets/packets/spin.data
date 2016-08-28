@@ -5,8 +5,8 @@ unknown2		int
 balance			int
 unknown4		int
 reels			arrayData2
-unknown5		double
-unknown6		double
+indexOfBetPerLine	double
+numLines		double
 unknown7		int
 unknown8		int
 unknown9		int
