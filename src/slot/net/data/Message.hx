@@ -4,7 +4,7 @@ import openfl.Vector;
 class Message
 {
 	public var type:Int = 6;
-	public var mesage:String;
+	public var message:String;
 	
 	public function new() 
 	{
@@ -13,6 +13,6 @@ class Message
 	
 	public function toString():String 
 	{
-		return "[Spin type=" + type + " mesage=" + mesage + "]";
+		return "[Spin type=" + type + " mesage=" + message + "]";
 	}
 }

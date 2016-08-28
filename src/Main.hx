@@ -5,6 +5,7 @@ import openfl.Assets;
 import openfl.Vector;
 import openfl.display.Sprite;
 import slot.net.StringDataSource;
+import slot.net.data.Balance;
 import slot.net.data.InitializePacket;
 import slot.net.data.Message;
 import slot.net.data.Spin;
@@ -20,14 +21,14 @@ class Main extends Sprite
 		
 		
 		var dataSource:StringDataSource = new StringDataSource();
-		dataSource.data = "6somemessage";
+		dataSource.data = "3255";
 		//dataSource.data = "103079fc4a914264810162162162151607051010101010101010101010061010101010101b322d1d11172114";
 		//dataSource.data = "052193332022755666555114144430219333344424225055511016666721933322625550566674440411312193331104444043372255565666219333555114744474335066622000001010101010104271010071a4138805101010101010170505051100101010101000000000000000001a121416181a21421e22823223c25026427828c2a02b42c82f0311831403168319031f43258332033e806101010101010";
 		
 		var dataSerializer = new DataSerializer(dataSource);
-		dataSerializer.setSerializeStructure(Assets.getText("packets/message.data"));
+		dataSerializer.setSerializeStructure(Assets.getText("packets/balance.data"));
 		
-		var packet:Message = new Message();
+		var packet:Balance = new Balance();
 		dataSerializer.serialize(packet);
 		
 		trace(dataSource.position, dataSource.length);
@@ -35,7 +36,7 @@ class Main extends Sprite
 		
 		var dataOutput:StringDataSource = new StringDataSource();
 		var dataDeserializer:DataDeserializer = new DataDeserializer(dataOutput);
-		dataDeserializer.setDeserializersStructure(Assets.getText("packets/spin.data"));
+		dataDeserializer.setDeserializersStructure(Assets.getText("packets/balance.data"));
 		
 		dataDeserializer.deserialize(packet);
 		
