@@ -60,6 +60,15 @@ class StringDataSource
 		return array;
 	}
 	
+		
+	public function readString():String
+	{
+		var str:String = data.substr(position);
+		position = length;
+		
+		return str;
+	}
+	
 	public function readInt():Int
 	{
 		var length:Int = read(1);
@@ -100,6 +109,12 @@ class StringDataSource
 		{
 			write(to16(array[i]));
 		}
+	}
+	
+	public function writeString(value:String):Void
+	{
+		position += value.length;
+		data += value;
 	}
 	
 	public function writeInt(value:Int):Void

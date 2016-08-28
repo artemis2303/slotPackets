@@ -3,9 +3,9 @@ import openfl.Vector;
 
 class Spin
 {
-	public var type:Int;
+	public var type:Int = 1;
 	
-	public var unknown0:Int; //double
+	public var unknown0:Int; //double тип спина, 3 - обычный спин, 8 - сделали халф, 7 - сделал ставку и выиграл или проиграл, 4 - нажали коллект, 0 - ласт стейт, 
 	public var unknown1:Int; //single - код ошибки //код ошиюки 1 - not enought credit; 2 - minimum bet is; >= 3 какая то хуерга если 6 или 5 то стоп будет вызван. Так же блочит все кнопки
 	
 	public var unknown2:Int; //int непонятный цвет

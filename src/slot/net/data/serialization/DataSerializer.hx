@@ -20,6 +20,7 @@ class DataSerializer extends BaseSerializer
 		serializersMap.set("arrayData3", ArraySerializer3);
 		serializersMap.set("array8Double", Array8DoubleSerialize);
 		serializersMap.set("arrayDoubleInt", ArrayDoubleIntSerialize);
+		serializersMap.set("string", StringSerializer);
 	}
 	
 	var pattern:EReg = new EReg("(.{1,}?)[\t ]{1,}(.{1,})", "gi");

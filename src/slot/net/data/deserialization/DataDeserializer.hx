@@ -20,6 +20,7 @@ class DataDeserializer extends BaseDeserializer
 		deserializersMap.set("arrayData3", ArrayDeserializer3);
 		deserializersMap.set("array8Double", Array8DoubleDeserialize);
 		deserializersMap.set("arrayDoubleInt", ArrayDoubleIntDeserialize);
+		deserializersMap.set("string", StringDeserializer);
 	}
 	
 	var pattern:EReg = new EReg("(.{1,}?)[\t ]{1,}(.{1,})", "gi");

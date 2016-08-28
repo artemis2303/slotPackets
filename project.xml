@@ -22,7 +22,9 @@
 	<assets path="assets/img" rename="img" />
 	<assets path="assets/packets" rename="packets" />
 	
-	<!-- optimize output
-	<haxeflag name="-dce full" /> -->
+	<!--
+	<haxeflag name="-dce full" />
+	<haxeflag name="-js-classic" /> 
+	<haxeflag name="-analyzer" />-->
 	
 </project>

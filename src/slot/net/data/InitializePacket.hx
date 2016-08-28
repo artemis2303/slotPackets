@@ -2,7 +2,7 @@ package slot.net.data;
 
 class InitializePacket
 {
-	public var type:Int;
+	public var type:Int = 0;
 	public var reelsData:ArrayData1;
 	
 	public var reelsData2:ArrayData1;
