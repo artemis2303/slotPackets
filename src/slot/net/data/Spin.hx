@@ -6,7 +6,7 @@ class Spin
 	public var type:Int;
 	
 	public var unknown0:Int; //double
-	public var unknown1:Int; //single
+	public var unknown1:Int; //single - код ошибки //код ошиюки 1 - not enought credit; 2 - minimum bet is; >= 3 какая то хуерга если 6 или 5 то стоп будет вызван. Так же блочит все кнопки
 	
 	public var unknown2:Int; //int непонятный цвет
 	public var balance:Int; //int
@@ -26,7 +26,7 @@ class Spin
 	
 	public var unknown13:ArrayData2; //arrayData2
 	public var unknown14:Array<Int>; //arrayDoubleInt выигрышные линии и сколько выиграно, скаттеры последняя линия
-	public var unknown15:Array<Int> = new Array<Int>(); //array8Double
+	public var unknown15:Array<Int> = new Array<Int>(); //array8Double история гембла можно слать в виде 0-3 буби, черви, крести, пики
 	
 	
 	
