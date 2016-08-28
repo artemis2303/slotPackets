@@ -6,7 +6,7 @@ import openfl.Vector;
 import openfl.display.Sprite;
 import slot.net.StringDataSource;
 import slot.net.data.InitializePacket;
-import slot.net.data.LastState;
+import slot.net.data.Spin;
 import slot.net.data.deserialization.DataDeserializer;
 import slot.net.data.serialization.DataSerializer;
 
@@ -25,7 +25,7 @@ class Main extends Sprite
 		var dataSerializer = new DataSerializer(dataSource);
 		dataSerializer.setSerializeStructure(Assets.getText("packets/lastState.data"));
 		
-		var packet:LastState = new LastState();
+		var packet:Spin = new Spin();
 		dataSerializer.serialize(packet);
 		
 		trace(dataSource.position, dataSource.length);
