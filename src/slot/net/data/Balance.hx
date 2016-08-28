@@ -1,10 +1,15 @@
 package slot.net.data;
 import openfl.Vector;
 
-class Spin
+class Balance
 {
 	public var type:Int = 3;
 	public var balance:Int;
+	
+	public function new() 
+	{
+		
+	}
 	
 	public function toString():String 
 	{
