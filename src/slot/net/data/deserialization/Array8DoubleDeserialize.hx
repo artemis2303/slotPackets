@@ -1,6 +1,5 @@
 package slot.net.data.deserialization;
 
-import openfl.Vector;
 import slot.net.StringDataSource;
 
 class Array8DoubleDeserialize extends BaseDeserializer
@@ -12,7 +11,7 @@ class Array8DoubleDeserialize extends BaseDeserializer
 	
 	override public function deserialize(input:Dynamic):Dynamic 
 	{
-		var outData:Vector<Int> = Reflect.getProperty(input, fieldToGet);
+		var outData:Array<Int> = Reflect.getProperty(input, fieldToGet);
 		
 		for (i in 0...8)
 		{

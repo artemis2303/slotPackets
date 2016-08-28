@@ -1,6 +1,5 @@
 package slot.net.data.serialization;
 
-import openfl.Vector;
 import slot.net.StringDataSource;
 
 class ArrayDoubleIntSerialize extends BaseSerializer
@@ -13,7 +12,7 @@ class ArrayDoubleIntSerialize extends BaseSerializer
 	override public function serialize(output:Dynamic):Dynamic 
 	{
 		var size:Int = data.readDouble();
-		var outData:Vector<Int> = new Vector<Int>();
+		var outData:Array<Int> = new Array<Int>();
 		
 		for (i in 0...size)
 		{

@@ -1,7 +1,5 @@
 package slot.net;
 
-import openfl.Vector;
-
 class StringDataSource
 {
 	@:isVar
@@ -49,10 +47,10 @@ class StringDataSource
 		return data = value;
 	}
 	
-	public function readArray():Vector<Int>
+	public function readArray():Array<Int>
 	{
 		var length:Int = readInt();
-		var array:Vector<Int> = new Vector<Int>();
+		var array:Array<Int> = new Array<Int>();
 		
 		for (i in 0...length)
 		{
@@ -92,7 +90,7 @@ class StringDataSource
 		return Std.parseInt(dataBuffer);
 	}
 	
-	public function writeArray(array:Vector<Int>):Void
+	public function writeArray(array:Array<Int>):Void
 	{
 		var length:Int = array.length;
 		

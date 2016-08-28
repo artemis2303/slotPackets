@@ -12,7 +12,7 @@ class Array8DoubleSerialize extends BaseSerializer
 	
 	override public function serialize(output:Dynamic):Dynamic 
 	{
-		var outData:Vector<Int> = new Vector<Int>();
+		var outData:Array<Int> = new Array<Int>();
 		
 		for (i in 0...8)
 		{

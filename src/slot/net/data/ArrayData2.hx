@@ -3,7 +3,7 @@ import openfl.Vector;
 
 class ArrayData2
 {
-	public var data:Vector<Int> = new Vector<Int>();
+	public var data:Array<Int> = new Array<Int>();
 	
 	public function new() 
 	{

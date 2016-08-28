@@ -37,9 +37,9 @@ class InitializePacket
 	public var unknown17:Int; //double
 	
 	public var unknown18:ArrayData2; //reelData3
-	public var unknown19:Vector<Int> = new Vector<Int>(8, true); //array8Double
-	public var betPerLine:Vector<Int>; //arrayDoubleInt
-	public var unknown21:Vector<Int>; //arrayDoubleInt
+	public var unknown19:Array<Int> = new Array<Int>(); //array8Double
+	public var betPerLine:Array<Int>; //arrayDoubleInt
+	public var unknown21:Array<Int>; //arrayDoubleInt
 	
 	//Дальше похоже может быть какая то хрень с валютой
 	
