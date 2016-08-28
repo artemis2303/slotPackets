@@ -4,7 +4,7 @@ import openfl.Vector;
 class ArrayData1
 {
 	public var size:Int = 0;
-	public var data:Vector<Array<Int>> = new Vector<Array<Int>>();
+	public var data:Array<Array<Int>> = new Array<Array<Int>>();
 	
 	public function new() 
 	{
@@ -13,6 +13,6 @@ class ArrayData1
 	
 	public function toString():String 
 	{
-		return "[ReelData reelsCount=" + size + "]";
+		return "[ArrayData1 size=" + size + " data=" + data.join(', ') + "]";
 	}
 }
