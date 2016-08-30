@@ -1,6 +1,6 @@
 package slot.net.data.deserialization;
 import slot.net.StringDataSource;
-
+import slot.net.data.packetModels.BasePacketData;
 
 class BaseDeserializer
 {
@@ -13,7 +13,7 @@ class BaseDeserializer
 		this.data = data;
 	}
 	
-	public function deserialize(input:Dynamic):Dynamic
+	public function deserialize(input:BasePacketData):Dynamic
 	{
 		return null;
 	}

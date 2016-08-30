@@ -1,5 +1,4 @@
 package slot.net.data;
-import openfl.Vector;
 
 class ArrayData1
 {
@@ -13,6 +12,6 @@ class ArrayData1
 	
 	public function toString():String 
 	{
-		return "[ArrayData1 size=" + size + " data=" + data.join(', ') + "]";
+		return "[ArrayData1 size=" + size + " data=" + data.join('\n') + "]";
 	}
 }

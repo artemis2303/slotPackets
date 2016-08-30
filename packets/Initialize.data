@@ -1,0 +1,29 @@
+type			single			= 0;
+reelsData		arrayData1;					//сами по себе рилы
+reelsData2		arrayData1;					//какие то другие рилы но не такие длинные, может быть фриспины
+spinType		double			= 0;		//может быть использовано для восстановления стейта если тут будет не 0
+unknown1		single;
+unknown2		arrayData2;					//массив интов длинной зависимый от количество рилов if reelData.size < 5? 5:reelData.size
+unknown3		int;
+balance			int;
+totalWin		int;						//используется если востанавливается стейт
+unknown5		double;
+minBet			int;
+maxBet			int;
+minBetMayBe		double;
+unknown6		int;
+unknown7		int;
+unknown8		int;
+unknown9		int;
+unknown10		int;
+unknown11		int;
+unknown12		int;
+unknown13		double;
+unknown14		double;
+unknown15		double;
+unknown16		int;
+unknown17		double;
+unknown18		arrayData3;					//зависит от reelsData2 if reelData2.size < 5? 5:reelData2.size;
+gambleHistory	array8Double;				//используется если востанавливается стейт
+betPerLine		arrayDoubleInt;
+unknown21		arrayDoubleInt;				//возможно win per line Для восстановления стейта. Скорее всего

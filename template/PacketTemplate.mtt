@@ -1,0 +1,21 @@
+package slot.net.data.packetModels;
+
+import slot.net.data.*;
+
+class ::CLASS_NAME:: extends BasePacketData 
+{	
+	::foreach CLASS_PROPERTIES::public var ::name:::::type::::if defaultValue:: = ::defaultValue::::end::;::if comment:://::comment::::end::
+	::end::
+	public function new ()
+	{	
+		super();	
+		
+		fields = [::foreach CLASS_PROPERTIES::"::name::"::if (c < length)::, ::end::::end::];
+		types = [::foreach CLASS_PROPERTIES::"::fieldType::"::if (c < length)::, ::end::::end::];
+	}
+	
+	override public function toString():String
+	{
+		return "[::CLASS_NAME::::foreach CLASS_PROPERTIES::\n ::name::=" + ::name:: + "::end::)]";
+	}
+}

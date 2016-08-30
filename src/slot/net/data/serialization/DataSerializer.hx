@@ -1,54 +1,37 @@
 package slot.net.data.serialization;
-import haxe.ds.HashMap;
-import openfl.Vector;
+import slot.net.data.packetModels.BasePacketData;
 
 
 class DataSerializer extends BaseSerializer
 {
-	private var serializers:Vector<ISerializator> = new Vector<ISerializator>();
-	private var serializersMap:Map<String, Class<BaseSerializer>> = new Map<String, Class<BaseSerializer>>();
+	private var serializersMap:Map<String, BaseSerializer> = new Map<String, BaseSerializer>();
 	
 	public function new(data:StringDataSource) 
 	{
 		super(data);
 		
-		serializersMap.set("single", SingleSerializer);
-		serializersMap.set("double", DoubleSerializer);
-		serializersMap.set("int", IntSerializer);
-		serializersMap.set("arrayData1", ArraySerializer1);
-		serializersMap.set("arrayData2", ArraySerializer2);
-		serializersMap.set("arrayData3", ArraySerializer3);
-		serializersMap.set("array8Double", Array8DoubleSerialize);
-		serializersMap.set("arrayDoubleInt", ArrayDoubleIntSerialize);
-		serializersMap.set("string", StringSerializer);
+		serializersMap.set("single", new SingleSerializer(data));
+		serializersMap.set("double", new DoubleSerializer(data));
+		serializersMap.set("int", new IntSerializer(data));
+		serializersMap.set("arrayData1", new ArraySerializer1(data));
+		serializersMap.set("arrayData2", new ArraySerializer2(data));
+		serializersMap.set("arrayData3", new ArraySerializer3(data));
+		serializersMap.set("array8Double", new Array8DoubleSerialize(data));
+		serializersMap.set("arrayDoubleInt", new ArrayDoubleIntSerialize(data));
+		serializersMap.set("string", new StringSerializer(data));
 	}
 	
-	var pattern:EReg = new EReg("(.{1,}?)[\t ]{1,}(.{1,})", "gi");
-	public function setSerializeStructure(structure:String):Void
+	override public function serialize(output:BasePacketData):Dynamic 
 	{
-		var lines:Array<String> = structure.split("\n");
-		
-		for (i in 0...lines.length)
+		var length:Int = output.types.length;
+		for (i in 0...length)
 		{
-			if (lines[i].length == 0)
-				continue;
-				
-			pattern.match(lines[i]);
+			var type:String = output.types[i];
+			var field:String = output.fields[i];
 			
-			var fieldName:String = pattern.matched(1);
-			var fieldType:String = pattern.matched(2);
+			var serializer:BaseSerializer = serializersMap.get(type);
+			serializer.fieldToSet = field;
 			
-			var serializer:BaseSerializer = Type.createInstance(serializersMap.get(fieldType), [data]);
-			serializer.fieldToSet = fieldName;
-			
-			serializers.push(serializer);
-		}
-	}
-	
-	override public function serialize(output:Dynamic):Dynamic 
-	{
-		for (serializer in serializers)
-		{
 			serializer.serialize(output);
 		}
 		

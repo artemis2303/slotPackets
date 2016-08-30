@@ -8,7 +8,7 @@
 	<!-- output -->
 	<app main="Main" file="SlotProtoParser" path="bin" />
 	
-	<window background="#000000" fps="60" />
+	<window background="#FFFFFF" fps="60" />
 	<window width="800" height="480" unless="mobile" />
 	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
 	
@@ -17,11 +17,14 @@
 	<haxelib name="openfl" />
 	<haxelib name="actuate" />
 	<haxelib name="compiletime" />
+	<haxelib name="swf" />
 	
 	<!-- assets -->
 	<icon path="assets/openfl.svg" />
 	<assets path="assets/img" rename="img" />
-	<assets path="assets/packets" rename="packets" />
+	
+	<library path="assets/bull_smith.swf" prelod="true" generate="true" />
+	<haxeflag name="--macro PacketGenerator._generate()"/>
 	
 	<!--
 	<haxeflag name="-dce full" />

@@ -1,0 +1,18 @@
+type				single				= 1;
+spinData			double; 			= 3;//double тип спина, 3 - обычный спин, 8 - сделали халф, 7 - сделал ставку и выиграл или проиграл, 4 - нажали коллект, 0 - ласт стейт, 
+errorCode			single; 			= 0;//код ошиюки 1 - not enought credit; 2 - minimum bet is; >= 3 какая то хуерга если 6 или 5 то стоп будет вызван. Так же блочит все кнопки
+userId				int;
+balance				int;
+totalWin			int;
+reels				arrayData2;
+indexOfBetPerLine	double;
+numLines			double;
+unknown7			int;
+unknown8			int;
+unknown9			int;
+unknown10			int;
+unknown11			int;
+unknown12			int;
+winPerLine			arrayData2;			//выигрышные линии и сколько выиграно, скаттеры последняя линия
+unknown14			arrayDoubleInt;
+gambleHistory		array8Double;		//история гембла можно слать в виде 0-3 буби, черви, крести, пики
