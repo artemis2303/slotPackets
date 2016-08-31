@@ -25,7 +25,7 @@
     <class path="D:\HaxeToolkit\haxe\lib\openfl\4,0,4\externs\core\flash" />
     <class path="D:\HaxeToolkit\haxe\lib\openfl\4,0,4\externs\core\openfl" />
     <class path="D:\HaxeToolkit\haxe\lib\openfl\4,0,4\externs\extras" />
-    <class path="bin\flash\release\haxe" />
+    <class path="bin\flash\debug\haxe" />
   </classpaths>
   <!-- Build options -->
   <build>
@@ -34,7 +34,7 @@
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="True" />
-    <option additional="--macro PacketGenerator._generate()&#xA;-swf-version 11.2" />
+    <option additional="--macro PacketGenerator._generate()&#xA;-swf-version 11.2&#xA;-debug " />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
