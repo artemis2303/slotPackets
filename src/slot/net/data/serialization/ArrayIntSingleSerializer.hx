@@ -4,19 +4,19 @@ import slot.net.StringDataSource;
 
 class ArrayIntSingleSerializer extends BaseSerializer
 {
-	public function new(data:StringDataSource) 
+	public function new(data:StringDataSource, isRequired:Bool = true) 
 	{
-		super(data);
+		super(data, isRequired);
 	}
 	
 	override public function serialize(output:Dynamic):Dynamic 
 	{
-		if (data.length < data.position)
+		if (!isRequired && data.length <= data.position)
 			return null;
 			
 		var size:Int = data.readInt();
 		var outData:Array<Int> = new Array<Int>();
-		trace("Size", size);
+		
 		for (i in 0...size)
 		{
 			outData.push(data.readSingle());

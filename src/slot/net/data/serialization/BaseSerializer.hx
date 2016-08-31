@@ -7,9 +7,11 @@ class BaseSerializer implements ISerializator
 {
 	var data:StringDataSource;
 	var fieldToSet:String;
+	var isRequired:Bool;
 
-	public function new(data:StringDataSource) 
+	public function new(data:StringDataSource, isRequired:Bool = true) 
 	{
+		this.isRequired = isRequired;
 		this.data = data;
 	}
 	

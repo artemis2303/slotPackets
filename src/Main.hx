@@ -131,7 +131,7 @@ class Main extends Sprite
 	private function onProcess(e:MouseEvent = null):Void 
 	{
 		trace("process");
-		//try
+		try
 		{
 			dataInput.data = inputView.text;
 			dataInput.position = 0;
@@ -160,14 +160,14 @@ class Main extends Sprite
 				resultView.text += " data deserialize check is pass";
 			}
 		}
-		/*catch (err:Error)
+		catch (err:Error)
 		{
 			trace('error');
 			outputView.text = untyped err.toString();
 			resultView.text = "an error occured";
 			outputView.appendText("\n at \n");
 			outputView.appendText(err.getStackTrace());
-		}*/
+		}
 	}
 	
 	

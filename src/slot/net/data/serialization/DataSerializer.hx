@@ -12,6 +12,7 @@ class DataSerializer extends BaseSerializer
 		
 		serializersMap.set("single", new SingleSerializer(data));
 		serializersMap.set("double", new DoubleSerializer(data));
+		serializersMap.set("notRequiredDouble", new DoubleSerializer(data, false));
 		serializersMap.set("int", new IntSerializer(data));
 		serializersMap.set("arrayData1", new ArraySerializer1(data));
 		serializersMap.set("arrayData2", new ArraySerializer2(data));
@@ -19,6 +20,7 @@ class DataSerializer extends BaseSerializer
 		serializersMap.set("array8Double", new Array8DoubleSerialize(data));
 		serializersMap.set("arrayDoubleInt", new ArrayDoubleIntSerialize(data));
 		serializersMap.set("arrayIntSingle", new ArrayIntSingleSerializer(data));
+		serializersMap.set("notRequiredArrayIntSingle", new ArrayIntSingleSerializer(data, false));
 		serializersMap.set("string", new StringSerializer(data));
 	}
 	
@@ -33,7 +35,6 @@ class DataSerializer extends BaseSerializer
 			var serializer:BaseSerializer = serializersMap.get(type);
 			serializer.fieldToSet = field;
 			
-			trace(serializer, data.position, data.length);
 			serializer.serialize(output);
 		}
 		

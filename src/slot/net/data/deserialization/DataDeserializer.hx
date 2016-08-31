@@ -13,6 +13,7 @@ class DataDeserializer extends BaseDeserializer
 		
 		deserializersMap.set("single", new SingleDeserializer(data));
 		deserializersMap.set("double", new DoubleDeserialization(data));
+		deserializersMap.set("notRequiredDouble", new DoubleDeserialization(data, false));
 		deserializersMap.set("int", new IntDeserializer(data));
 		deserializersMap.set("arrayData1", new ArrayDeserializer1(data));
 		deserializersMap.set("arrayData2", new ArrayDeserializer2(data));
@@ -20,6 +21,7 @@ class DataDeserializer extends BaseDeserializer
 		deserializersMap.set("array8Double", new Array8DoubleDeserialize(data));
 		deserializersMap.set("arrayDoubleInt", new ArrayDoubleIntDeserialize(data));
 		deserializersMap.set("arrayIntSingle", new ArrayIntSingleDeserializer(data));
+		deserializersMap.set("notRequiredArrayIntSingle", new ArrayIntSingleDeserializer(data, false));
 		deserializersMap.set("string", new StringDeserializer(data));
 	}
 	

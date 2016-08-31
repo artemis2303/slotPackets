@@ -19,6 +19,7 @@ class PacketGenerator
 		types = new Map<String, String>();
 		types.set("single", "Int");
 		types.set("double", "Int");
+		types.set("notRequiredDouble", "Int");
 		types.set("int", "Int");
 		types.set("string", "String");
 		types.set("arrayData1", "ArrayData1");
@@ -27,6 +28,7 @@ class PacketGenerator
 		types.set("array8Double", "Array<Int>");
 		types.set("arrayDoubleInt", "Array<Int>");
 		types.set("arrayIntSingle", "Array<Int>");
+		types.set("notRequiredArrayIntSingle", "Array<Int>");
 		
 		var packetsList = sys.FileSystem.readDirectory("packets");
 		

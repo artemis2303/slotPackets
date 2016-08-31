@@ -33,7 +33,7 @@ class BaseSpin extends BasePacketData
 		super();	
 		
 		fields = ["type", "spinData", "errorCode", "userId", "balance", "totalWin", "reels", "indexOfBetPerLine", "numLines", "unknown7", "unknown8", "unknown9", "unknown10", "unknown11", "unknown12", "winPerLine", "unknown14", "gambleHistory", "unknown15", "unknown16", "unknown17", "unknown18", "unknown19"];
-		types = ["single", "double", "single", "int", "int", "int", "arrayData2", "double", "double", "int", "int", "int", "int", "int", "int", "arrayData2", "arrayDoubleInt", "array8Double", "double", "arrayIntSingle", "arrayIntSingle", "arrayIntSingle", "arrayIntSingle"];
+		types = ["single", "double", "single", "int", "int", "int", "arrayData2", "double", "double", "int", "int", "int", "int", "int", "int", "arrayData2", "arrayDoubleInt", "array8Double", "notRequiredDouble", "notRequiredArrayIntSingle", "notRequiredArrayIntSingle", "notRequiredArrayIntSingle", "notRequiredArrayIntSingle"];
 	}
 	
 	override public function toString():String

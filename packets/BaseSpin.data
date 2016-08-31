@@ -16,8 +16,8 @@ unknown12			int;
 winPerLine			arrayData2;			//выигрышные линии и сколько выиграно, скаттеры последняя линия
 unknown14			arrayDoubleInt;
 gambleHistory		array8Double;		//история гембла можно слать в виде 0-3 буби, черви, крести, пики
-unknown15			double;				//в айрис фенкс если это число 15 то чему то там присваивается -1 если нет то присваевается это число
-unknown16			arrayIntSingle;
-unknown17			arrayIntSingle;
-unknown18			arrayIntSingle;
-unknown19			arrayIntSingle;
+unknown15			notRequiredDouble;	//в айрис фенкс если это число 15 то чему то там присваивается -1 если нет то присваевается это число
+unknown16			notRequiredArrayIntSingle;
+unknown17			notRequiredArrayIntSingle;
+unknown18			notRequiredArrayIntSingle;
+unknown19			notRequiredArrayIntSingle;

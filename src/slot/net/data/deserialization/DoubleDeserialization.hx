@@ -4,15 +4,17 @@ import slot.net.StringDataSource;
 
 class DoubleDeserialization extends BaseDeserializer
 {
-
-	public function new(data:StringDataSource) 
+	public function new(data:StringDataSource, isRequired:Bool = true) 
 	{
-		super(data);
+		super(data, isRequired);
 	}
 	
 	override public function deserialize(input:Dynamic):Dynamic 
 	{
 		var double:Int = Reflect.getProperty(input, fieldToGet);
+		
+		if (double == 0 && !isRequired)
+			return double;
 		
 		data.writeDouble(double);
 		
