@@ -17,7 +17,7 @@ class BaseSpin extends BasePacketData
 	public var bonusSpinsLeft:Int;
 	public var bonusSpinWin:Int;//сколько выиграл за текущий спин в бонусных спинах
 	public var bonusGameMultiplayer:Int;
-	public var unknown11:Int;//в бонус спинах оно было 1 хз чт значит	
+	public var unknown11:Int;//в бонус спинах оно было 1 хз чт значит может соклько раз выиграл бону спины?
 	public var bonusSpinWinTotal:Int;//сколько выиграл в бонус спинах за несоклько раз, но не все сюда складывается, возможно именно сам выигрышь бонус спионв сюда не идет а идут только выигрыши именно за бонус спины
 	public var winPerLine:ArrayData2;//выигрышные линии и сколько выиграно, скаттеры последняя линия
 	public var unknown14:Array<Int>;
