@@ -115,7 +115,7 @@ class Main extends Sprite
 		
 		versionView.x = stage.stageWidth - versionView.width - 5;
 		
-		inputView.text = "10004273F61E1E4B101111111111101010101000281010101010101010101010061010101010101B322D1D11172114";
+		inputView.text = "11e07a2075b5426611021121925d23221f0428101010101010101010101033101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010232b2417312e0920051559fff1559fff1559fff1559fff";
 		trace(inputView.length);
 		
 		okButton.addEventListener(MouseEvent.MOUSE_DOWN, onProcess);
@@ -131,7 +131,7 @@ class Main extends Sprite
 	private function onProcess(e:MouseEvent = null):Void 
 	{
 		trace("process");
-		try
+		//try
 		{
 			dataInput.data = inputView.text;
 			dataInput.position = 0;
@@ -160,14 +160,14 @@ class Main extends Sprite
 				resultView.text += " data deserialize check is pass";
 			}
 		}
-		catch (err:Error)
+		/*catch (err:Error)
 		{
 			trace('error');
 			outputView.text = untyped err.toString();
 			resultView.text = "an error occured";
 			outputView.appendText("\n at \n");
 			outputView.appendText(err.getStackTrace());
-		}
+		}*/
 	}
 	
 	

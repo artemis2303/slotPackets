@@ -26,6 +26,7 @@ class PacketGenerator
 		types.set("arrayData3", "ArrayData2");
 		types.set("array8Double", "Array<Int>");
 		types.set("arrayDoubleInt", "Array<Int>");
+		types.set("arrayIntSingle", "Array<Int>");
 		
 		var packetsList = sys.FileSystem.readDirectory("packets");
 		

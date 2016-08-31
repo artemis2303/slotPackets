@@ -18,6 +18,7 @@ class DataSerializer extends BaseSerializer
 		serializersMap.set("arrayData3", new ArraySerializer3(data));
 		serializersMap.set("array8Double", new Array8DoubleSerialize(data));
 		serializersMap.set("arrayDoubleInt", new ArrayDoubleIntSerialize(data));
+		serializersMap.set("arrayIntSingle", new ArrayIntSingleSerializer(data));
 		serializersMap.set("string", new StringSerializer(data));
 	}
 	
@@ -32,6 +33,7 @@ class DataSerializer extends BaseSerializer
 			var serializer:BaseSerializer = serializersMap.get(type);
 			serializer.fieldToSet = field;
 			
+			trace(serializer, data.position, data.length);
 			serializer.serialize(output);
 		}
 		

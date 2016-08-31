@@ -91,7 +91,7 @@ class StringDataSource
 		if (length == 0)
 			return 0;
 			
-		if (position >= data.length)
+		if (position > data.length)
 			throw new RangeError("position is out of data range position=" + position + " rage=" + data.length);
 			
 		var dataBuffer:String = "0x";

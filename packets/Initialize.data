@@ -27,3 +27,8 @@ unknown18		arrayData3;					//зависит от reelsData2 if reelData2.size < 
 gambleHistory	array8Double;				//используется если востанавливается стейт
 betPerLine		arrayDoubleInt;
 unknown21		arrayDoubleInt;				//возможно win per line Для восстановления стейта. Скорее всего
+unknown22		double;				//в айрис фенкс если это число 15 то чему то там присваивается -1 если нет то присваевается это число
+unknown23		arrayIntSingle;
+unknown24		arrayIntSingle;
+unknown25		arrayIntSingle;
+unknown26		arrayIntSingle;
