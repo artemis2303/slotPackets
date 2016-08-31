@@ -1,4 +1,5 @@
 package slot.net;
+import openfl.errors.RangeError;
 
 class StringDataSource
 {
@@ -89,6 +90,9 @@ class StringDataSource
 	{
 		if (length == 0)
 			return 0;
+			
+		if (position >= data.length)
+			throw new RangeError("position is out of data range");
 			
 		var dataBuffer:String = "0x";
 		for (i in 0...length)
