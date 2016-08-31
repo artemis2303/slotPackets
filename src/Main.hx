@@ -59,6 +59,8 @@ class Main extends Sprite
 		outputHeader.text = "Output:";
 		outputView = new TextField();
 		outputView.border = true;
+		outputView.wordWrap = true;
+		outputView.multiline = true;
 		resultView = new TextField();
 		resultView.autoSize = TextFieldAutoSize.LEFT;
 		addChild(outputHeader);
@@ -97,12 +99,12 @@ class Main extends Sprite
 		
 		inputHeader.x = inputHeader.y = 5;
 		inputView.x = 5;
-		inputView.y = inputHeader.height + inputHeader.y + 5;
+		inputView.y = inputHeader.height + inputHeader.y + 3;
 		
 		outputHeader.x = 5;
-		outputHeader.y = inputView.y + inputView.height + 10;
+		outputHeader.y = inputView.y + inputView.height + 6;
 		outputView.x = 5;
-		outputView.y = outputHeader.y + outputHeader.height + 5;
+		outputView.y = outputHeader.y + outputHeader.height + 3;
 		
 		resultView.x = 5;
 		resultView.y = outputView.y + outputView.height + 1;
@@ -137,10 +139,25 @@ class Main extends Sprite
 				throw "packet with code " + inputView.text.charAt(0) + " does not exist";
 				
 			var packet:Class<BasePacketData> = packets.get(inputView.text.charAt(0));
-			var asString:String = (dataSerializer.serialize(Type.createInstance(packet, [])));
-			outputView.text = "" + asString;
+			var dataModel:BasePacketData = dataSerializer.serialize(Type.createInstance(packet, []));
+			var asString:String = dataModel.toString();
+			outputView.text = asString;
 			
 			resultView.text = dataInput.length == dataInput.position? "data fully parsed":"cannot parse whole packet position=" + dataInput.position + " legnth=" + dataInput.length;
+			
+			dataOutput.data = "";
+			dataOutput.position = 0;
+			
+			dataDeserializer.deserialize(dataModel);
+			
+			if (dataInput.data.toLowerCase() != dataOutput.data.toLowerCase())
+			{
+				resultView.text += " data deserialize check is not pass " + dataOutput.length + "/" + dataInput.length;
+			}
+			else
+			{
+				resultView.text += " data deserialize check is pass";
+			}
 		}
 		catch (e:Dynamic)
 		{

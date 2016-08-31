@@ -12,6 +12,6 @@ class ArrayData1
 	
 	public function toString():String 
 	{
-		return "[ArrayData1 size=" + size + " data=" + data.join('\n') + "]";
+		return "[ArrayData1 size=" + size + " data=[" + data.join('],\n[') + "]]";
 	}
 }
