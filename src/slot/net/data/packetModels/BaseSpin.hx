@@ -5,8 +5,8 @@ import slot.net.data.*;
 class BaseSpin extends BasePacketData 
 {	
 	public var type:Int = 1;
-	public var spinData:Int = 3;//double тип спина, 3 - обычный спин, 8 - сделали халф, 7 - сделал ставку и выиграл или проиграл, 4 - нажали коллект, 0 - ласт стейт, 5 - выиграли бонус спины, 6 крутим бонус спины, 12 конец бонус спинов
-	public var errorCode:Int = 0;//код ошиюки 1 - not enought credit; 2 - minimum bet is; >= 3 какая то хуерга если 6 или 5 то стоп будет вызван. Так же блочит все кнопки
+	public var spinData:Int = 3;//double тип спина, 3 - обычный спин, 8 - сделали халф, 7 - сделал ставку и выиграл или проиграл, 4 - нажали коллект, 0 - ласт стейт, 5 - выиграли бонус спины, 6 крутим бонус спины, 12 конец бонус спинов
+	public var errorCode:Int = 0;//код ошиюки 1 - not enought credit; 2 - minimum bet is; >= 3 какая то хуерга если 6 или 5 то стоп будет вызван. Так же блочит все кнопки
 	public var userId:Int;
 	public var balance:Int;
 	public var totalWin:Int;
@@ -15,14 +15,14 @@ class BaseSpin extends BasePacketData
 	public var numLines:Int;
 	public var bonusSpinsTotal:Int;
 	public var bonusSpinsLeft:Int;
-	public var bonusSpinWin:Int;//сколько выиграл за текущий спин в бонусных спинах
+	public var bonusSpinWin:Int;//сколько выиграл за текущий спин в бонусных спинах
 	public var bonusGameMultiplayer:Int;
-	public var unknown11:Int;//в бонус спинах оно было 1 хз чт значит может соклько раз выиграл бону спины?
-	public var bonusSpinWinTotal:Int;//сколько выиграл в бонус спинах за несоклько раз, но не все сюда складывается, возможно именно сам выигрышь бонус спионв сюда не идет а идут только выигрыши именно за бонус спины
-	public var winPerLine:ArrayData2;//выигрышные линии и сколько выиграно, скаттеры последняя линия
-	public var unknown14:Array<Int>;//в даймонд манки тут выигрышные линии
-	public var gambleHistory:Array<Int>;//история гембла можно слать в виде 0-3 буби, черви, крести, пики
-	public var unknown15:Int;//в айрис фенкс если это число 15 то чему то там присваивается -1 если нет то присваевается это число
+	public var unknown11:Int;//в бонус спинах оно было 1 хз чт значит может соклько раз выиграл бону спины?
+	public var bonusSpinWinTotal:Int;//сколько выиграл в бонус спинах за несоклько раз, но не все сюда складывается, возможно именно сам выигрышь бонус спионв сюда не идет а идут только выигрыши именно за бонус спины
+	public var winPerLine:ArrayData2;//выигрышные линии и сколько выиграно, скаттеры последняя линия
+	public var unknown14:Array<Int>;//в даймонд манки тут выигрышные линии
+	public var gambleHistory:Array<Int>;//история гембла можно слать в виде 0-3 буби, черви, крести, пики
+	public var unknown15:Int;//в айрис фенкс если это число 15 то чему то там присваивается -1 если нет то присваевается это число
 	public var unknown16:Array<Int>;
 	public var unknown17:Array<Int>;
 	public var unknown18:Array<Int>;

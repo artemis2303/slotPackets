@@ -16,12 +16,6 @@
 	<source path="src" />
 	<haxelib name="openfl" />
 	<haxelib name="actuate" />
-	<haxelib name="compiletime" />
-	<haxelib name="swf" />
-	
-	<!-- assets -->
-	<icon path="assets/openfl.svg" />
-	<assets path="assets/img" rename="img" />
 	
 	<library path="assets/bull_smith.swf" prelod="true" generate="true" />
 	<haxeflag name="--macro PacketGenerator._generate()"/>

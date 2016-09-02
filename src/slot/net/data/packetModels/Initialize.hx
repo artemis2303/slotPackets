@@ -5,14 +5,14 @@ import slot.net.data.*;
 class Initialize extends BasePacketData 
 {	
 	public var type:Int = 0;
-	public var reelsData:ArrayData1;//сами по себе рилы
-	public var reelsData2:ArrayData1;//какие то другие рилы но не такие длинные, может быть фриспины
-	public var spinType:Int = 0;//может быть использовано для восстановления стейта если тут будет не 0
+	public var reelsData:ArrayData1;//сами по себе рилы
+	public var reelsData2:ArrayData1;//какие то другие рилы но не такие длинные, может быть фриспины
+	public var spinType:Int = 0;//может быть использовано для восстановления стейта если тут будет не 0
 	public var unknown1:Int;
-	public var unknown2:ArrayData2;//массив интов длинной зависимый от количество рилов if reelData.size < 5? 5:reelData.size
+	public var unknown2:ArrayData2;//массив интов длинной зависимый от количество рилов if reelData.size < 5? 5:reelData.size
 	public var unknown3:Int;
 	public var balance:Int;
-	public var totalWin:Int;//используется если востанавливается стейт
+	public var totalWin:Int;//используется если востанавливается стейт
 	public var unknown5:Int;
 	public var minBet:Int;
 	public var maxBet:Int;
@@ -29,8 +29,8 @@ class Initialize extends BasePacketData
 	public var unknown15:Int;
 	public var unknown16:Int;
 	public var unknown17:Int;
-	public var unknown18:ArrayData2;//зависит от reelsData2 if reelData2.size < 5? 5:reelData2.size;
-	public var gambleHistory:Array<Int>;//используется если востанавливается стейт
+	public var unknown18:ArrayData2;//зависит от reelsData2 if reelData2.size < 5? 5:reelData2.size;
+	public var gambleHistory:Array<Int>;//используется если востанавливается стейт
 	public var betPerLine:Array<Int>;
 	public var unknown21:Array<Int>;//возможно win per line Для восстановления стейта. Скорее всего
 	
