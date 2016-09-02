@@ -138,9 +138,10 @@ class Main extends Sprite
 			
 			if (!packets.exists(inputView.text.charAt(0)))
 				throw "packet with code " + inputView.text.charAt(0) + " does not exist";
-				
+			
 			var packet:Class<BasePacketData> = packets.get(inputView.text.charAt(0));
 			var dataModel:BasePacketData = dataSerializer.serialize(Type.createInstance(packet, []));
+			
 			var asString:String = dataModel.toString();
 			outputView.text = asString;
 			
@@ -149,6 +150,7 @@ class Main extends Sprite
 			dataOutput.data = "";
 			dataOutput.position = 0;
 			
+			Reflect.setField(dataModel, "unknown15", null);
 			dataDeserializer.deserialize(dataModel);
 			
 			if (dataInput.data.toLowerCase() != dataOutput.data.toLowerCase())
@@ -159,6 +161,8 @@ class Main extends Sprite
 			{
 				resultView.text += " data deserialize check is pass";
 			}
+			
+			outputView.text += "\n" + dataOutput.data;
 		}
 		catch (err:Error)
 		{

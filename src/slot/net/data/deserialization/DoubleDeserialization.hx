@@ -14,7 +14,7 @@ class DoubleDeserialization extends BaseDeserializer
 		var double:Int = Reflect.getProperty(input, fieldToGet);
 		
 		if (double == 0 && !isRequired)
-			return double;
+			return null;
 		
 		data.writeDouble(double);
 		

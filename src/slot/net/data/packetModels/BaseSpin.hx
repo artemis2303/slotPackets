@@ -20,7 +20,7 @@ class BaseSpin extends BasePacketData
 	public var unknown11:Int;//в бонус спинах оно было 1 хз чт значит может соклько раз выиграл бону спины?
 	public var bonusSpinWinTotal:Int;//сколько выиграл в бонус спинах за несоклько раз, но не все сюда складывается, возможно именно сам выигрышь бонус спионв сюда не идет а идут только выигрыши именно за бонус спины
 	public var winPerLine:ArrayData2;//выигрышные линии и сколько выиграно, скаттеры последняя линия
-	public var unknown14:Array<Int>;
+	public var unknown14:Array<Int>;//в даймонд манки тут выигрышные линии
 	public var gambleHistory:Array<Int>;//история гембла можно слать в виде 0-3 буби, черви, крести, пики
 	public var unknown15:Int;//в айрис фенкс если это число 15 то чему то там присваивается -1 если нет то присваевается это число
 	public var unknown16:Array<Int>;
