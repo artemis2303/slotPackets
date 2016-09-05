@@ -1,7 +1,7 @@
 package slot.net.data.packetModels;
 
 
-class Spin extends BaseSpin
+class FortunaFruitSpin extends BaseSpinFortunafruits
 {	
 	public var reelsData:ArrayData1 = new ArrayData1();
 	

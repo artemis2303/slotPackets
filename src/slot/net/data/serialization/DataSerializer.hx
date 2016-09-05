@@ -17,7 +17,8 @@ class DataSerializer extends BaseSerializer
 		serializersMap.set("arrayData1", new ArraySerializer1(data));
 		serializersMap.set("arrayData2", new ArraySerializer2(data));
 		serializersMap.set("arrayData3", new ArraySerializer3(data));
-		serializersMap.set("array8Double", new Array8DoubleSerialize(data));
+		serializersMap.set("array8Double", new ArrayNOfDoubleSerializer(data, 8));
+		serializersMap.set("array4Double", new ArrayNOfDoubleSerializer(data, 4));
 		serializersMap.set("arrayDoubleInt", new ArrayDoubleIntSerialize(data));
 		serializersMap.set("arrayIntSingle", new ArrayIntSingleSerializer(data));
 		serializersMap.set("notRequiredArrayIntSingle", new ArrayIntSingleSerializer(data, false));

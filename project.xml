@@ -17,9 +17,8 @@
 	<haxelib name="openfl" />
 	<haxelib name="actuate" />
 	
-	<library path="assets/bull_smith.swf" prelod="true" generate="true" />
 	<haxeflag name="--macro PacketGenerator._generate()"/>
-	
+	<assets path="assets/logs" include="*.log" rename="logs" />
 	<!--
 	<haxeflag name="-dce full" />
 	<haxeflag name="-js-classic" /> 

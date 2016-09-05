@@ -12,6 +12,7 @@ import slot.net.StringDataSource;
 import slot.net.data.deserialization.DataDeserializer;
 import slot.net.data.packetModels.Balance;
 import slot.net.data.packetModels.BasePacketData;
+import slot.net.data.packetModels.FortunaFruitSpin;
 import slot.net.data.packetModels.Initialize;
 import slot.net.data.packetModels.Message;
 import slot.net.data.packetModels.Packet8;
@@ -34,13 +35,15 @@ class Main extends Sprite
 	{
 		super();
 		
+		//new StriptLog();
+		
 		trace("....");
 		stage.scaleMode = "noScale";
 		stage.align = "TL";
 		
 		packets = new Map<String, Class<BasePacketData>>();
 		packets.set("0", Initialize);
-		packets.set("1", Spin);
+		packets.set("1", FortunaFruitSpin);
 		packets.set("3", Balance);
 		packets.set("6", Message);
 		packets.set("7", Message);
@@ -143,14 +146,14 @@ class Main extends Sprite
 			var dataModel:BasePacketData = dataSerializer.serialize(Type.createInstance(packet, []));
 			
 			var asString:String = dataModel.toString();
-			outputView.text = asString;
+			outputView.text = packet + "\n" + asString;
 			
 			resultView.text = dataInput.length == dataInput.position? "data fully parsed":"cannot parse whole packet position=" + dataInput.position + " legnth=" + dataInput.length;
 			
 			dataOutput.data = "";
 			dataOutput.position = 0;
 			
-			Reflect.setField(dataModel, "unknown15", null);
+			//Reflect.setField(dataModel, "unknown15", null);
 			dataDeserializer.deserialize(dataModel);
 			
 			if (dataInput.data.toLowerCase() != dataOutput.data.toLowerCase())

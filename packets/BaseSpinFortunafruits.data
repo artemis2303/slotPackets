@@ -16,3 +16,8 @@ bonusSpinWinTotal		int;				//сколько выиграл в бонус спи�
 bonusGameReels			arrayData2;			//выигрышные линии и сколько выиграно, скаттеры последняя линия
 winPerLine				arrayDoubleInt;		//в даймонд манки тут выигрышные линии
 gambleHistory			array8Double;		//история гембла можно слать в виде 0-3 буби, черви, крести, пики
+unknown15				array4Double;
+unknown16				array4Double;
+unknown17				array4Double;
+unknown18				array4Double;
+unknown19				array4Double;
