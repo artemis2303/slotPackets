@@ -27,6 +27,7 @@ class PacketGenerator
 		types.set("arrayData3", "ArrayData2");
 		types.set("array8Double", "Array<Int>");
 		types.set("array4Double", "Array<Int>");
+		types.set("array3Double", "Array<Int>");
 		types.set("arrayDoubleInt", "Array<Int>");
 		types.set("arrayIntSingle", "Array<Int>");
 		types.set("notRequiredArrayIntSingle", "Array<Int>");
