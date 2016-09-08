@@ -18,6 +18,7 @@ import slot.net.data.packetModels.Initialize;
 import slot.net.data.packetModels.Message;
 import slot.net.data.packetModels.Packet8;
 import slot.net.data.packetModels.Spin;
+import slot.net.data.packetModels.WildStarsSpin;
 import slot.net.data.serialization.DataSerializer;
 
 class Main extends Sprite 
@@ -44,7 +45,7 @@ class Main extends Sprite
 		
 		packets = new Map<String, Class<BasePacketData>>();
 		packets.set("0", Initialize);
-		packets.set("1", HotStarsSpin);
+		packets.set("1", WildStarsSpin);
 		packets.set("3", Balance);
 		packets.set("6", Message);
 		packets.set("7", Message);
