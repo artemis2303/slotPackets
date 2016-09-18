@@ -19,6 +19,7 @@ class DataDeserializer extends BaseDeserializer
 		deserializersMap.set("arrayData2", new ArrayDeserializer2(data));
 		deserializersMap.set("arrayData3", new ArrayDeserializer3(data));
 		deserializersMap.set("array8Double", new ArrayNOfDoubleDeserialize(data, 8));
+		deserializersMap.set("array5Double", new ArrayNOfDoubleDeserialize(data, 5));
 		deserializersMap.set("array4Double", new ArrayNOfDoubleDeserialize(data, 4));
 		deserializersMap.set("array3Double", new ArrayNOfDoubleDeserialize(data, 3));
 		deserializersMap.set("arrayDoubleInt", new ArrayDoubleIntDeserialize(data));

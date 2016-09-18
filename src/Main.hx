@@ -13,6 +13,8 @@ import slot.net.data.deserialization.DataDeserializer;
 import slot.net.data.packetModels.Balance;
 import slot.net.data.packetModels.BasePacketData;
 import slot.net.data.packetModels.FortunaFruitSpin;
+import slot.net.data.packetModels.GemStarSpin;
+import slot.net.data.packetModels.GemStarSpin;
 import slot.net.data.packetModels.HotStarsSpin;
 import slot.net.data.packetModels.Initialize;
 import slot.net.data.packetModels.Message;
@@ -45,7 +47,7 @@ class Main extends Sprite
 		
 		packets = new Map<String, Class<BasePacketData>>();
 		packets.set("0", Initialize);
-		packets.set("1", WildStarsSpin);
+		packets.set("1", GemStarSpin);
 		packets.set("3", Balance);
 		packets.set("6", Message);
 		packets.set("7", Message);

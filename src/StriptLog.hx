@@ -17,7 +17,7 @@ class StriptLog
 		
 		var log:String = Assets.getText("logs/" + pathToLog + ".log");
 		
-		var reg:EReg = new EReg("ProcessSocketServerCallCommand.hx:[0-9]+: (.*) ,SPIN DATA:", "m");
+		var reg:EReg = new EReg("SPIN DATA:(.*):SPIN DATA END", "m");
 		
 		var i:Int = 0;
 		while (reg.match(log))
