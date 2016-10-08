@@ -1,0 +1,19 @@
+type					single				= 1;
+spinData				double; 			= 3;//double тип спина, 3 - обычный спин, 8 - сделали халф, 7 - сделал ставку и выиграл или проиграл, 4 - нажали коллект, 0 - ласт стейт, 5 - выиграли бонус спины, 6 крутим бонус спины, 12 конец бонус спинов
+errorCode				single; 			= 0;//код ошиюки 1 - not enought credit; 2 - minimum bet is; >= 3 какая то хуерга если 6 или 5 то стоп будет вызван. Так же блочит все кнопки
+userId					int;
+balance					int;
+totalWin				int;
+reels					arrayData2;
+indexOfBetPerLine		double;
+numLines				double;
+bonusSpinsTotal			int;
+bonusSpinsLeft			int;
+bonusSpinWin			int;				//сколько выиграл за текущий спин в бонусных спинах
+bonusGameMultiplayer	int;
+unknown11				int;				//в бонус спинах оно было 1 хз чт значит может соклько раз выиграл бону спины?
+bonusSpinWinTotal		int;				//сколько выиграл в бонус спинах за несоклько раз, но не все сюда складывается, возможно именно сам выигрышь бонус спионв сюда не идет а идут только выигрыши именно за бонус спины
+bonusGameReels			arrayData2;			//выигрышные линии и сколько выиграно, скаттеры последняя линия
+winPerLine				arrayDoubleInt;		//в даймонд манки тут выигрышные линии
+gambleHistory			array8Double;		//история гембла можно слать в виде 0-3 буби, черви, крести, пики
+unknown12				array5Double;		// value == 0? true:false. Когда выпала фича приходит значение в тру на каком то видать из барабанов, когда коллект делаешь оно все еще тру а в следующем спине уже нет.
