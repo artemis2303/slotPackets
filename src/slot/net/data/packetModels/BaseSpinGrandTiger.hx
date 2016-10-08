@@ -22,7 +22,7 @@ class BaseSpinGrandTiger extends BasePacketData
 	public var bonusGameReels:ArrayData2;//выигрышные линии и сколько выиграно, скаттеры последняя линия
 	public var winPerLine:Array<Int>;//в даймонд манки тут выигрышные линии
 	public var gambleHistory:Array<Int>;//история гембла можно слать в виде 0-3 буби, черви, крести, пики
-	public var unknown12:Array<Int>;// value == 0? true:false
+	public var unknown12:Array<Int>;// value == 0? true:false. Когда выпала фича приходит значение в тру на каком то видать из барабанов, когда коллект делаешь оно все еще тру а в следующем спине уже нет.
 	
 	public function new ()
 	{	
